@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"verror",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "verror",
+    "description": "api documentation for [verror (v1.9.0)](https://github.com/davepacheco/node-verror#readme) [![npm package](https://img.shields.io/npm/v/npmdoc-verror.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-verror) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-verror.svg)](https://travis-ci.org/npmdoc/node-npmdoc-verror)",
     "devDependencies": {
-        "verror": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
-        "utility2": "kaizhu256/node-utility2#alpha"
+        "utility2": "kaizhu256/node-utility2#alpha",
+        "verror": "*"
     },
-    "name":"npmdoc-verror",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-verror",
+    "keywords": [
+        "documentation",
+        "verror"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_verror.js",
+    "name": "npmdoc-verror",
+    "nameAlias": "npmdoc_verror",
+    "nameOriginal": "npmdoc-verror",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-verror.git"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
