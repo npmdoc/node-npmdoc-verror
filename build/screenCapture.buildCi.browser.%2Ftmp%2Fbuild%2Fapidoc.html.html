@@ -56,6 +56,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.verror.verror">
+            function <span class="apidocSignatureSpan"></span>verror
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.verror.MultiError">
             function <span class="apidocSignatureSpan">verror.</span>MultiError
             <span class="apidocSignatureSpan">(errors)</span>
@@ -152,6 +161,12 @@
 
         <li>
 
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">verror.</span>VError.prototype</span>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">verror.</span>WError.prototype</span>
 
         </li>
@@ -216,6 +231,128 @@
             function <span class="apidocSignatureSpan">verror.SError.</span>super_
             <span class="apidocSignatureSpan">()</span>
             </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.verror.VError">module verror.VError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.verror.VError.VError">
+            function <span class="apidocSignatureSpan">verror.</span>VError
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.verror.VError.MultiError">
+            function <span class="apidocSignatureSpan">verror.VError.</span>MultiError
+            <span class="apidocSignatureSpan">(errors)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.verror.VError.SError">
+            function <span class="apidocSignatureSpan">verror.VError.</span>SError
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.verror.VError.WError">
+            function <span class="apidocSignatureSpan">verror.VError.</span>WError
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.verror.VError.cause">
+            function <span class="apidocSignatureSpan">verror.VError.</span>cause
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.verror.VError.findCauseByName">
+            function <span class="apidocSignatureSpan">verror.VError.</span>findCauseByName
+            <span class="apidocSignatureSpan">(err, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.verror.VError.fullStack">
+            function <span class="apidocSignatureSpan">verror.VError.</span>fullStack
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.verror.VError.hasCauseWithName">
+            function <span class="apidocSignatureSpan">verror.VError.</span>hasCauseWithName
+            <span class="apidocSignatureSpan">(err, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.verror.VError.info">
+            function <span class="apidocSignatureSpan">verror.VError.</span>info
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.verror.VError.super_">
+            function <span class="apidocSignatureSpan">verror.VError.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.verror.VError.prototype">module verror.VError.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.verror.VError.prototype.cause">
+            function <span class="apidocSignatureSpan">verror.VError.prototype.</span>cause
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.verror.VError.prototype.toString">
+            function <span class="apidocSignatureSpan">verror.VError.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">verror.VError.prototype.</span>name</span>
 
         </li>
 
@@ -303,6 +440,98 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.verror" id="apidoc.module.verror">module verror</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.verror.verror" id="apidoc.element.verror.verror">
+        function <span class="apidocSignatureSpan"></span>verror
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function VError()
+{
+	var args, obj, parsed, cause, ctor, message, k;
+
+	args = Array.prototype.slice.call(arguments, 0);
+
+	<span class="apidocCodeCommentSpan">/*
+	 * This is a regrettable pattern, but JavaScript's built-in Error class
+	 * is defined to work this way, so we allow the constructor to be called
+	 * without "new".
+	 */
+</span>	if (!(this instanceof VError)) {
+		obj = Object.create(VError.prototype);
+		VError.apply(obj, arguments);
+		return (obj);
+	}
+
+	/*
+	 * For convenience and backwards compatibility, we support several
+	 * different calling forms.  Normalize them here.
+	 */
+	parsed = parseConstructorArguments({
+	    'argv': args,
+	    'strict': false
+	});
+
+	/*
+	 * If we've been given a name, apply it now.
+	 */
+	if (parsed.options.name) {
+		mod_assertplus.string(parsed.options.name,
+		    'error\'s "name" must be a string');
+		this.name = parsed.options.name;
+	}
+
+	/*
+	 * For debugging, we keep track of the original short message (attached
+	 * this Error particularly) separately from the complete message (which
+	 * includes the messages of our cause chain).
+	 */
+	this.jse_shortmsg = parsed.shortmessage;
+	message = parsed.shortmessage;
+
+	/*
+	 * If we've been given a cause, record a reference to it and update our
+	 * message appropriately.
+	 */
+	cause = parsed.options.cause;
+	if (cause) {
+		mod_assertplus.ok(mod_isError(cause), 'cause is not an Error');
+		this.jse_cause = cause;
+
+		if (!parsed.options.skipCauseMessage) {
+			message += ': ' + cause.message;
+		}
+	}
+
+	/*
+	 * If we've been given an object with properties, shallow-copy that
+	 * here.  We don't want to use a deep copy in case there are non-plain
+	 * objects here, but we don't want to use the original object in case
+	 * the caller modifies it later.
+	 */
+	this.jse_info = {};
+	if (parsed.options.info) {
+		for (k in parsed.options.info) {
+			this.jse_info[k] = parsed.options.info[k];
+		}
+	}
+
+	this.message = message;
+	Error.call(this, message);
+
+	if (Error.captureStackTrace) {
+		ctor = parsed.options.constructorOpt || this.constructor;
+		Error.captureStackTrace(this, ctor);
+	}
+
+	return (this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
@@ -697,6 +926,8 @@ rpcUser: "bob"
 
 
 
+
+
 </div>
 
 <div class="apidocSectionDiv">
@@ -967,6 +1198,460 @@ rpcUser: "bob"
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.verror.VError" id="apidoc.module.verror.VError">module verror.VError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.verror.VError.VError" id="apidoc.element.verror.VError.VError">
+        function <span class="apidocSignatureSpan">verror.</span>VError
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function VError()
+{
+	var args, obj, parsed, cause, ctor, message, k;
+
+	args = Array.prototype.slice.call(arguments, 0);
+
+	<span class="apidocCodeCommentSpan">/*
+	 * This is a regrettable pattern, but JavaScript's built-in Error class
+	 * is defined to work this way, so we allow the constructor to be called
+	 * without "new".
+	 */
+</span>	if (!(this instanceof VError)) {
+		obj = Object.create(VError.prototype);
+		VError.apply(obj, arguments);
+		return (obj);
+	}
+
+	/*
+	 * For convenience and backwards compatibility, we support several
+	 * different calling forms.  Normalize them here.
+	 */
+	parsed = parseConstructorArguments({
+	    'argv': args,
+	    'strict': false
+	});
+
+	/*
+	 * If we've been given a name, apply it now.
+	 */
+	if (parsed.options.name) {
+		mod_assertplus.string(parsed.options.name,
+		    'error\'s "name" must be a string');
+		this.name = parsed.options.name;
+	}
+
+	/*
+	 * For debugging, we keep track of the original short message (attached
+	 * this Error particularly) separately from the complete message (which
+	 * includes the messages of our cause chain).
+	 */
+	this.jse_shortmsg = parsed.shortmessage;
+	message = parsed.shortmessage;
+
+	/*
+	 * If we've been given a cause, record a reference to it and update our
+	 * message appropriately.
+	 */
+	cause = parsed.options.cause;
+	if (cause) {
+		mod_assertplus.ok(mod_isError(cause), 'cause is not an Error');
+		this.jse_cause = cause;
+
+		if (!parsed.options.skipCauseMessage) {
+			message += ': ' + cause.message;
+		}
+	}
+
+	/*
+	 * If we've been given an object with properties, shallow-copy that
+	 * here.  We don't want to use a deep copy in case there are non-plain
+	 * objects here, but we don't want to use the original object in case
+	 * the caller modifies it later.
+	 */
+	this.jse_info = {};
+	if (parsed.options.info) {
+		for (k in parsed.options.info) {
+			this.jse_info[k] = parsed.options.info[k];
+		}
+	}
+
+	this.message = message;
+	Error.call(this, message);
+
+	if (Error.captureStackTrace) {
+		ctor = parsed.options.constructorOpt || this.constructor;
+		Error.captureStackTrace(this, ctor);
+	}
+
+	return (this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.verror.VError.MultiError" id="apidoc.element.verror.VError.MultiError">
+        function <span class="apidocSignatureSpan">verror.VError.</span>MultiError
+        <span class="apidocSignatureSpan">(errors)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MultiError(errors)
+{
+	mod_assertplus.array(errors, 'list of errors');
+	mod_assertplus.ok(errors.length &gt; 0, 'must be at least one error');
+	this.ase_errors = errors;
+
+	VError.call(this, {
+	    'cause': errors[0]
+	}, 'first of %d error%s', errors.length, errors.length == 1 ? '' : 's');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.verror.VError.SError" id="apidoc.element.verror.VError.SError">
+        function <span class="apidocSignatureSpan">verror.VError.</span>SError
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SError()
+{
+	var args, obj, parsed, options;
+
+	args = Array.prototype.slice.call(arguments, 0);
+	if (!(this instanceof SError)) {
+		obj = Object.create(SError.prototype);
+		SError.apply(obj, arguments);
+		return (obj);
+	}
+
+	parsed = parseConstructorArguments({
+	    'argv': args,
+	    'strict': true
+	});
+
+	options = parsed.options;
+	VError.call(this, options, '%s', parsed.shortmessage);
+
+	return (this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.verror.VError.WError" id="apidoc.element.verror.VError.WError">
+        function <span class="apidocSignatureSpan">verror.VError.</span>WError
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WError()
+{
+	var args, obj, parsed, options;
+
+	args = Array.prototype.slice.call(arguments, 0);
+	if (!(this instanceof WError)) {
+		obj = Object.create(WError.prototype);
+		WError.apply(obj, args);
+		return (obj);
+	}
+
+	parsed = parseConstructorArguments({
+	    'argv': args,
+	    'strict': false
+	});
+
+	options = parsed.options;
+	options['skipCauseMessage'] = true;
+	VError.call(this, options, '%s', parsed.shortmessage);
+
+	return (this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.verror.VError.cause" id="apidoc.element.verror.VError.cause">
+        function <span class="apidocSignatureSpan">verror.VError.</span>cause
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cause = function (err)
+{
+	mod_assertplus.ok(mod_isError(err), 'err must be an Error');
+	return (mod_isError(err.jse_cause) ? err.jse_cause : null);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    sort: open failed: /nonexistent: No such file or directory
+
+To match the Unixy feel, when you print out the error, just prepend the
+program's name to the VError's `message`.  Or just call
+[node-cmdutil.fail(your_verror)](https://github.com/joyent/node-cmdutil), which
+does this for you.
+
+You can get the next-level Error using `err.<span class="apidocCodeKeywordSpan">cause</span>()`:
+
+```javascript
+console.error(err2.cause().message);
+```
+
+prints:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.verror.VError.findCauseByName" id="apidoc.element.verror.VError.findCauseByName">
+        function <span class="apidocSignatureSpan">verror.VError.</span>findCauseByName
+        <span class="apidocSignatureSpan">(err, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findCauseByName = function (err, name)
+{
+	var cause;
+
+	mod_assertplus.ok(mod_isError(err), 'err must be an Error');
+	mod_assertplus.string(name, 'name');
+	mod_assertplus.ok(name.length &gt; 0, 'name cannot be empty');
+
+	for (cause = err; cause !== null; cause = VError.cause(cause)) {
+		mod_assertplus.ok(mod_isError(cause));
+		if (cause.name == name) {
+			return (cause);
+		}
+	}
+
+	return (null);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+booleans, strings, and objects and arrays containing only other plain objects).
+
+### `VError.fullStack(err)`
+
+Returns a string containing the full stack trace, with all nested errors recursively
+reported as `'caused by:' + err.stack`.
+
+### `VError.<span class="apidocCodeKeywordSpan">findCauseByName</span>(err, name)`
+
+The `findCauseByName()` function traverses the cause chain for `err`, looking
+for an error whose `name` property matches the passed in `name` value. If no
+match is found, `null` is returned.
+
+If all you want is to know _whether_ there's a cause (and you don't care what it
+is), you can use `VError.hasCauseWithName(err, name)`.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.verror.VError.fullStack" id="apidoc.element.verror.VError.fullStack">
+        function <span class="apidocSignatureSpan">verror.VError.</span>fullStack
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fullStack = function (err)
+{
+	mod_assertplus.ok(mod_isError(err), 'err must be an Error');
+
+	var cause = VError.cause(err);
+
+	if (cause) {
+		return (err.stack + '\ncaused by: ' + VError.fullStack(cause));
+	}
+
+	return (err.stack);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+These properties are intended to provide programmatically-accessible metadata
+about the error.  For an error that indicates a failure to resolve a DNS name,
+informational properties might include the DNS name to be resolved, or even the
+list of resolvers used to resolve it.  The values of these properties should
+generally be plain objects (i.e., consisting only of null, undefined, numbers,
+booleans, strings, and objects and arrays containing only other plain objects).
+
+### `VError.<span class="apidocCodeKeywordSpan">fullStack</span>(err)`
+
+Returns a string containing the full stack trace, with all nested errors recursively
+reported as `'caused by:' + err.stack`.
+
+### `VError.findCauseByName(err, name)`
+
+The `findCauseByName()` function traverses the cause chain for `err`, looking
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.verror.VError.hasCauseWithName" id="apidoc.element.verror.VError.hasCauseWithName">
+        function <span class="apidocSignatureSpan">verror.VError.</span>hasCauseWithName
+        <span class="apidocSignatureSpan">(err, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasCauseWithName = function (err, name)
+{
+	return (VError.findCauseByName(err, name) !== null);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### `VError.findCauseByName(err, name)`
+
+The `findCauseByName()` function traverses the cause chain for `err`, looking
+for an error whose `name` property matches the passed in `name` value. If no
+match is found, `null` is returned.
+
+If all you want is to know _whether_ there's a cause (and you don't care what it
+is), you can use `VError.<span class="apidocCodeKeywordSpan">hasCauseWithName</span>(err, name)`.
+
+If a vanilla error or a non-VError error is passed in, then there is no cause
+chain to traverse. In this scenario, the function will check the `name`
+property of only `err`.
+
+### `VError.hasCauseWithName(err, name)`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.verror.VError.info" id="apidoc.element.verror.VError.info">
+        function <span class="apidocSignatureSpan">verror.VError.</span>info
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">info = function (err)
+{
+	var rv, cause, k;
+
+	mod_assertplus.ok(mod_isError(err), 'err must be an Error');
+	cause = VError.cause(err);
+	if (cause !== null) {
+		rv = VError.info(cause);
+	} else {
+		rv = {};
+	}
+
+	if (typeof (err.jse_info) == 'object' &amp;&amp; err.jse_info !== null) {
+		for (k in err.jse_info) {
+			rv[k] = err.jse_info[k];
+		}
+	}
+
+	return (rv);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    name: FastServerError
+    message: "server error: user 'bob' is not authorized"
+    cause:
+        name: UnauthorizedError
+        message: "user 'bob' is not authorized"
+        rpcUser: "bob"
+
+When the caller uses `VError.<span class="apidocCodeKeywordSpan">info</span>()`, the information properties are collapsed
+so that it looks like this:
+
+message: "request failed: server error: user 'bob' is not authorized"
+rpcMsgid: &lt;unique identifier for this request&gt;
+rpcMethod: GetObject
+rpcUser: "bob"
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.verror.VError.super_" id="apidoc.element.verror.VError.super_">
+        function <span class="apidocSignatureSpan">verror.VError.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Error() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.verror.VError.prototype" id="apidoc.module.verror.VError.prototype">module verror.VError.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.verror.VError.prototype.cause" id="apidoc.element.verror.VError.prototype.cause">
+        function <span class="apidocSignatureSpan">verror.VError.prototype.</span>cause
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ve_cause()
+{
+	var cause = VError.cause(this);
+	return (cause === null ? undefined : cause);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    sort: open failed: /nonexistent: No such file or directory
+
+To match the Unixy feel, when you print out the error, just prepend the
+program's name to the VError's `message`.  Or just call
+[node-cmdutil.fail(your_verror)](https://github.com/joyent/node-cmdutil), which
+does this for you.
+
+You can get the next-level Error using `err.<span class="apidocCodeKeywordSpan">cause</span>()`:
+
+```javascript
+console.error(err2.cause().message);
+```
+
+prints:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.verror.VError.prototype.toString" id="apidoc.element.verror.VError.prototype.toString">
+        function <span class="apidocSignatureSpan">verror.VError.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ve_toString()
+{
+	var str = (this.hasOwnProperty('name') &amp;&amp; this.name ||
+		this.constructor.name || this.constructor.prototype.name);
+	if (this.message)
+		str += ': ' + this.message;
+
+	return (str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
 
 
 </div>
